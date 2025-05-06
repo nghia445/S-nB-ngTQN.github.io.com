@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEBSITE ĐẶT SÂN BÓNG ONLINE CHO SÂN TQNMEDIA</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Translate API script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "vi",
+            includedLanguages: "vi,en",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+  <body>
+    <script async  
+    src="https://widget.taggo.chat/v2.js"
+    data-taggo-botid="67f8c1d00b30a1beaeff435d"></script>
+    <!-- Nút lướt lên đầu trang -->
+<button id="scrollTopBtn" title="Lên đầu trang">🔝</button>
+    <div
+      class="anh-header"
+      style="background-image: url(anh/banner_top.png)"
+    ></div>
+    <div class="than">
+      <div class="logo-header">
+        <h2 class="logo">⚽ TQN<br />MEDIA</h2>
+        <div class="timkiem">
+          <input type="text" id="voiceSearch" placeholder="🔍 Tìm kiếm cái bạn cần!" />
+          <img
+            id="mic"
+            src="https://img.icons8.com/ios-filled/50/000000/microphone.png"
+            alt="Micro"
+          />
+        </div>
+      
+        
+        <nav class="menu">
+              <div class="thongbao">
+                <a href="#">➕ Thêm</a>
+          </div>
+          
+          <div class="lichsu">
+            <a href="#">🕘 Lịch sử</a>
+          </div>
+          <div class="them">
+            <a href="#">🛎️ Thông báo</a>
+          </div>
+          
+          <!-- Nằm sau, cùng cấp với .thongbao và .lichsu -->
+          <div class="message">Đang cập nhật...</div>
+          <div class="message1">Bạn chưa đặt sân bên sân TQN kìa người đẹp...</div>
+          
+          <div class="tt">
+            <a href="thanhtoan.html">💳 Thanh toán</a>
+          </div>
+
+          <div class="tt">
+            <a href="datsan.html">💥 Đặt sân</a>
+          </div>
+          
+          <div class="tt">
+            <a href="danhgia.html">⭐ Đánh giá</a>
+          </div>
+          <div class="tt">
+        
+            <a href="lienhe.html">📞 Liên hệ</a>
+          </div>
+          <div class="tt">
+            <a href="login.html">👤 Đăng nhập</a>
+          </div>
+         
+          
+        
+       
+        </nav>
+      </div>
+      <!-- Banner trái -->
+      <div class="bannerAside" id="bannerLeft">
+        <img src="anh/banner__left.jpg" alt="Banner trái" />
+      </div>
+
+      <!-- Banner phải -->
+      <div class="bannerAside" id="bannerRight">
+        <img src="anh/banner__right.jpg" alt="Banner phải" />
+      </div>
+      <div class="nutchuyenmau">
+        <button onclick="toggleDarkMode()">Chuyển chế độ nền</button>
+      </div>
+      <div class="language-switcher">
+        <span>🌐</span>
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+    <section id="banner">
+        <div class="banner__main">
+          <img src="anh/main.jfif" alt="Banner chính" />
+    </section>
+    <div class="flash-sale-container">
+        <div class="flash-sale-header">
+            <div class="flash-sale-corner-text">
+                <span class="flash-icon">*</span>
+                <span>FLASH</span>
+                <span>SALE</span>
+                <span class="flash-icon">*</span>
+            </div>
+        </div>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="bg/5.jpeg" alt="Sân 5 5">
+                <h3>Sân 5 5</h3>
+                <p class="old-price">120.000 VND</p>
+                <p class="new-price">100.000 VND</p>
+                <button class="buy-button">Đặt ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="bg/9.webp" alt="Sân 7 7">
+                <h3>Sân 7 7</h3>
+                <p class="old-price">140.000 VND</p>
+                <p class="new-price">120.000 VND</p>
+                <button class="buy-button">Đặt ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="bg/13.jpg" alt="Sân 8 8">
+                <h3>Sân 8 8</h3>
+                <p class="old-price">200.000 VND</p>
+                <p class="new-price">150.000 VND</p>
+                <button class="buy-button">Đặt ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="bg/12.jpg" alt="Sân 12 12">
+                <h3>Sân 12 12</h3>
+                <p class="old-price">250.000 VND/1h</p>
+                <p class="new-price">200.000 VND</p>
+                <button class="buy-button">Đặt ngay</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="flash-sale-container">
+        <div class="flash-sale-header">
+            <div class="flash-sale-corner-text">
+                <span class="flash-icon">*</span>
+                <span>HOT</span>
+                <span>FOOD</span>
+                <span class="flash-icon">*</span>
+            </div>
+        </div>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="anh/loi-giai-cho-cau-hoi-uong-revive-co-tot-khong3.jpg" alt="Sân 5 5">
+                <h3>Nước giải khát revice bù khoáng </h3>
+                <p class="old-price">12.000 VND</p>
+                <p class="new-price">10.000 VND</p>
+                <button class="buy-button">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="anh/food3.jpg" alt="Sân 7 7">
+                <h3>Snack</h3>
+                <p class="old-price">10.000 VND</p>
+                <p class="new-price">7.000 VND</p>
+                <button class="buy-button">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="anh/food4.jfif" alt="Sân 8 8">
+                <h3>Mì trộn hải sản siêu nhiều topping ngon</h3>
+                <p class="old-price">40.000 VND</p>
+                <p class="new-price">35.000 VND</p>
+                <button class="buy-button">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="anh/food1.jpg" alt="Sân 12 12">
+                <h3>Trà đào siêu ngon siêu bù nước</h3>
+                <p class="old-price">40.000 VND/1h</p>
+                <p class="new-price">30.000 VND</p>
+                <button class="buy-button">Đặt ngay</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="flash-sale-container">
+        <div class="flash-sale-header">
+            <div class="flash-sale-corner-text">
+                <span class="flash-icon">*</span>
+                <span>COLLABORATION</span>
+                <span>PRODUCT</span>
+                <span class="flash-icon">*</span>
+            </div>
+        </div>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="anh/Cross_Z.jpg" alt="Thắt Lưng Cross_Z bandai">
+                <h3>Mua Thắt Lưng Cross_Z bandai Tặng 20p Khi Đặt Sân 8 8</h3>
+                <p class="old-price">500.000 VND</p>
+                <p class="new-price">420.000 VND</p>
+                <button class="buy-button">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="anh/ly giữ nhiệt.jfif" alt="Sân 7 7">
+                <h3>Mua Ly Giữ Nhiệt In Hình Kamen Rider Cực Ngầu Tặng 20p Khi Đặt Sân 5 5</h3>
+                <p class="old-price">400.000 VND</p>
+                <p class="new-price">350.000 VND</p>
+                <button class="buy-button">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="anh/túi đeo vai Hoàng Đế.jfif" alt="Sân 8 8">
+                <h3>Mua Túi Đeo Vai Hoàng Đế Rider E Cực Ngầu Tặng 20p Khi Đặt Sân 7 7</h3>
+                <p class="old-price">480.000 VND</p>
+                <p class="new-price">430.000 VND</p>
+                <button class="buy-button">Mua ngay</button>
+            </div>
+            <div class="product-item">
+                <img src="anh/MÔ HÌNH BIẾN HÌNH HIỆP SĨ MẶT NẠ GEATS KAMEN RIDER GEATS DX X GEATS RAISE BUCKLE.jfif" alt="Sân 12 12">
+                <h3>Mua Mô Hình Kamen RIDER Genm Musou Tặng 30p Khi Đặt Sân 12 12</h3>
+                <p class="old-price">1.250.000 VND/1h</p>
+                <p class="new-price">1.000.000 VND</p>
+                <button class="buy-button">Mua ngay</button>
+            </div>
+        </div>
+    </div>
+    <div class="danhgia">
+        <div class="tieude">
+          <h1>⭐ Đánh giá của khách hàng ⭐</h1>
+          <div class="user-info">
+            <img src="bg/meme3.webp" alt="ảnh" />
+            <p1>Anh Nigger 😍</p1>
+          </div>
+          <p class="review-text">
+            📝 Website khá đẹp, tiện lợi và có nhiều chức năng thú vị. Nói chung là gút chóp. Quá là tuyệt vời không còn gì để chê.
+          </p>
+          <div class="rating">
+            <span class="star">☆</span>
+            <span class="star">☆</span>
+            <span class="star">☆</span>
+            <span class="star">☆</span>
+            <span class="star">☆</span>
+          </div>
+        </div>
+      <div class="tieude">
+        <h1>⭐ Đánh giá của khách hàng ⭐</h1>
+        <div class="user-info">
+          <img src="bg/meme2.jpg" alt="ảnh" />
+          <p1>Anh Cute 😊</p1>
+        </div>
+        <p class="review-text">
+          📝 Sân đẹp, rộng rãi, nhân viên phục vụ hiền lành, nhưng đẹp zai nhất là a chủ website Trần Quốc Nghĩa. 
+        </p>
+        <div class="rating">
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+        </div>
+      </div>
+      <div class="tieude">
+        <h1>⭐ Đánh giá của khách hàng ⭐</h1>
+        <div class="user-info">
+          <img src="bg/meme1.jpg" alt="ảnh" />
+          <p1>Anh Mặt Ngầu 🐼</p1>
+        </div>
+        <p class="review-text">
+          📝 Từ lúc có website này việc đặt sân bóng của tôi trở nên quá easy và tiết kiệm được kha khá thời gian.<br> Cảm ơn chủ sân và chủ website đã tạo ra 1 sẩn phẩm quá yo mot như này.
+        </p>
+        <div class="rating">
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+          <span class="star">☆</span>
+        </div>
+      </div>
+    </div>
+    <div id="rank--title" class="commentTitle">🏆 BẢNG XẾP HẠNG</div>
+
+    <section class="xephang__container">
+      <!-- BẢNG THÁNG -->
+      <div class="rank rankMonths">
+        <div class="rank__header">✨ Xếp Hạng Tuần ✨</div>
+    
+        <div class="rank__row rank__row--header">
+          <div class="rank__col rank__level">Hạng</div>
+          <div class="rank__col rank__name">Họ và Tên</div>
+          <div class="rank__col rank__count">Số lượng sân đặt</div>
+        </div>
+    
+        <div class="rank__row top1">
+          <div class="rank__col rank__level">1<i class="fa-solid fa-1"></i></div>
+          <div class="rank__col rank__name">Trần Quốc Nghĩa</div>
+          <div class="rank__col rank__count">6</div>
+        </div>
+    
+        <div class="rank__row top2">
+          <div class="rank__col rank__level">2<i class="fa-solid fa-2"></i></div>
+          <div class="rank__col rank__name">Nguyễn Tâm Bình</div>
+          <div class="rank__col rank__count">5</div>
+        </div>
+    
+        <div class="rank__row top3">
+          <div class="rank__col rank__level">3<i class="fa-solid fa-3"></i></div>
+          <div class="rank__col rank__name">Trương Thị Thịnh</div>
+          <div class="rank__col rank__count">4</div>
+        </div>
+      </div>
+    
+      <!-- BẢNG TUẦN -->
+      <div class="rank rankWeeks">
+        <div class="rank__header">✨ Xếp hạng tháng ✨</div>
+    
+        <div class="rank__row rank__row--header">
+          <div class="rank__col rank__level">Hạng</div>
+          <div class="rank__col rank__name">Họ và Tên</div>
+          <div class="rank__col rank__count">Số lượng sân đặt</div>
+        </div>
+    
+        <div class="rank__row top1">
+          <div class="rank__col rank__level">1<i class="fa-solid fa-1"></i></div>
+          <div class="rank__col rank__name">Trần Quốc Nghĩa</div>
+          <div class="rank__col rank__count">12</div>
+        </div>
+    
+        <div class="rank__row top2">
+          <div class="rank__col rank__level">2<i class="fa-solid fa-2"></i></div>
+          <div class="rank__col rank__name">Nguyễn Tâm Bình</div>
+          <div class="rank__col rank__count">10</div>
+        </div>
+    
+        <div class="rank__row top3">
+          <div class="rank__col rank__level">3<i class="fa-solid fa-3"></i></div>
+          <div class="rank__col rank__name">Trương Thị Khoai</div>
+          <div class="rank__col rank__count">9</div>
+        </div>
+      </div>
+    </section>
+    
+    </div>
+    <div class="day">
+        <div class="column">
+          <h2>👤 VỀ TQN MEDIA</h2>
+          <p>📖 Giới thiệu</p>
+          <p>🧑‍🤝‍🧑 Hợp tác</p>
+        </div>
+        <div class="column">
+          <h2>📜 CHÍNH SÁCH</h2>
+          <p>🛡️ Chính sách bảo mật</p>
+          <p>🧑‍⚕️ Chính sách hỗ trợ</p>
+        </div>
+        <div class="column">
+          <h2>ℹ️ THÔNG TIN</h2>
+          <p>
+            <a href="http://tdmu.edu.vn/">🛡️ Chính sách bảo mật</a>
+          </p>
+          <p>
+            <a href="https://www.facebook.com/nghia.tran.42663?mibextid=ZbWKwL"
+              >🏠 Địa chỉ liên hệ trực tiếp</a
+            >
+          </p>
+          <p>
+            <a href="http://tdmu.edu.vn/">🏟️ Địa chỉ sân</a>
+          </p>
+        </div>
+        <div class="column">
+          <h2>🤝 CHĂM SÓC KHÁCH HÀNG</h2>
+          <p>🧑‍💻 cskh@TQNMEDIA.com</p>
+          <p>📱 0372385182</p>
+        </div>
+      </div>
+      <div class="cuoi">
+      <div class="cuoitrang">
+        <p>KẾT NỐI VỚI CHÚNG TÔI</p>
+        <div class="youtube">
+          <span class="icon">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </span>
+          <label>Youtube</label>
+        </div>
+        <div class="tiktok">
+          <span class="icon">
+            <ion-icon name="logo-tiktok"></ion-icon>
+          </span>
+          <label>TikTok</label>
+        </div>
+        <div class="facebook">
+          <span class="icon">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </span>
+          <label>Facebook</label>
+        </div>
+      </div>
+  
+      <script src="main.js"></script>
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+  <script src="main.js"></script>
+</html>

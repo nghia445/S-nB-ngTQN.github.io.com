@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đặt sân bóng</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        max-width: 500px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #ccc;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+
+      pre {
+        white-space: pre-wrap;
+        background: #eee;
+        padding: 15px;
+        margin-top: 20px;
+        max-width: 500px;
+        margin: auto;
+        border-radius: 8px;
+      }
+      /* Liên kết Quay về trang chủ */
+      .go-home {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .go-home a {
+        color: #2a2a2a;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      .go-home a:hover {
+        text-decoration: underline;
+      }
+
+      .go-home {
+        position: fixed; /* Giữ vị trí cố định khi cuộn trang */
+        bottom: 20px; /* Cách dưới của màn hình 20px */
+        right: 20px; /* Cách phải của màn hình 20px */
+        background-color: #f0f0f0; /* Màu nền nhẹ cho dễ nhìn */
+        padding: 10px 20px; /* Khoảng cách trong */
+        border-radius: 5px; /* Bo góc */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+      }
+
+      .go-home a {
+        text-decoration: none; /* Không có gạch chân */
+        color: #333; /* Màu chữ */
+        font-weight: bold; /* Chữ đậm */
+      }
+
+      .go-home a:hover {
+        color: #007bff; /* Màu chữ khi di chuột */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Đặt sân bóng mini</h1>
+
+    <form id="formDatSan">
+      <label for="ten">Tên người đặt:</label>
+      <input type="text" id="ten" required />
+
+      <label for="loaiSan">Chọn loại sân:</label>
+      <select id="loaiSan" required>
+        <option value="">--Chọn sân--</option>
+        <option value="5">Sân 5 người - 100k/h</option>
+        <option value="7">Sân 7 người - 150k/h</option>
+        <option value="9">Sân 9 người - 200k/h</option>
+        <option value="12">Sân 12 người - 250k/h</option>
+      </select>
+
+      <label for="soGio">Số giờ thuê:</label>
+      <input type="number" id="soGio" min="1" required />
+
+      <label for="ngay">Ngày sử dụng sân:</label>
+      <input type="date" id="ngay" required />
+
+      <label for="gioBatDau">Giờ bắt đầu:</label>
+      <input type="time" id="gioBatDau" required />
+
+      <button type="submit">Đặt sân</button>
+    </form>
+
+    <pre id="ketQua"></pre>
+    <div class="go-home">
+      <a href="index.html">Quay về trang chủ</a>
+    </div>
+    <script>
+      document
+        .getElementById("formDatSan") //Tìm phần tử form có ID là formDatSan. Gắn sự kiện "submit" vào form này. Khi form được submit, gọi hàm async xử lý.
+        .addEventListener("submit", async (e) => {
+          e.preventDefault(); // ngăn tải lại trang
+          // lấy giá trị từ ô
+          const ten = document.getElementById("ten").value;
+          const loaiSan = document.getElementById("loaiSan").value;
+          const soGio = parseInt(document.getElementById("soGio").value);
+          const ngay = document.getElementById("ngay").value;
+          const gioBatDau = document.getElementById("gioBatDau").value;
+
+          const response = await fetch("/api/dat-san", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ten, loaiSan, soGio, ngay, gioBatDau }),
+          });
+          //Gửi dữ liệu vừa lấy lên server bằng fetch() qua đường dẫn /api/dat-san. Gửi dưới dạng JSON.
+          const data = await response.json(); // chờ phản hồi
+          if (response.ok) {
+            document.getElementById("ketQua").innerText = data.message; // Hiển thị thông báo đơn giản
+          } else {
+            document.getElementById("ketQua").innerText = data.error;
+          }
+        });
+    </script>
+  </body>
+</html>

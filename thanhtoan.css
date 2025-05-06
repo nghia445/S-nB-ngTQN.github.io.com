@@ -1,0 +1,213 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.checkout-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 200px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Giảm chiều rộng khi bỏ tóm tắt đơn hàng */
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    width: 95%;
+    padding: 30px;
+  }
+}
+
+.payment-details-section {
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 700;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.payment-methods {
+  margin-top: 25px;
+}
+
+.payment-method {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+}
+
+.payment-method label {
+  font-weight: 500;
+  color: #444;
+  margin-left: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 15px;
+}
+
+.bank-transfer-info {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #5cb85c;
+  border-radius: 6px;
+  background-color: #d4edda;
+  color: #155724;
+  display: none;
+}
+
+.bank-transfer-info p {
+  margin-bottom: 10px;
+}
+
+.bank-transfer-qr {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.bank-transfer-qr img {
+  max-width: 180px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.success-message {
+  color: #198754;
+  font-weight: bold;
+  margin-top: 25px;
+  font-size: 1.1rem;
+  display: none;
+  text-align: center;
+}
+
+/* Icon cho phương thức thanh toán */
+.payment-method label i {
+  margin-right: 8px;
+  font-size: 1.2em;
+  color: #555;
+}
+/* Liên kết Quay về trang chủ */
+.go-home {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.go-home a {
+  color: #2a2a2a;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.go-home a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+.go-home {
+  position: fixed; /* Giữ vị trí cố định khi cuộn trang */
+  bottom: 20px; /* Cách dưới của màn hình 20px */
+  right: 20px; /* Cách phải của màn hình 20px */
+  background-color: #f0f0f0; /* Màu nền nhẹ cho dễ nhìn */
+  padding: 10px 20px; /* Khoảng cách trong */
+  border-radius: 5px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.go-home a {
+  text-decoration: none; /* Không có gạch chân */
+  color: #333; /* Màu chữ */
+  font-weight: bold; /* Chữ đậm */
+}
+
+.go-home a:hover {
+  color: #007bff; /* Màu chữ khi di chuột */
+}

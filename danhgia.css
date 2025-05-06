@@ -1,0 +1,159 @@
+/* Reset mặc định cho các phần tử */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body toàn trang */
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Form container */
+form {
+  width: 50%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="radio"] {
+  margin: 0 5px;
+}
+
+/* Label styling */
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #888;
+  font-size: 20px;
+}
+
+/* Khảo sát mức độ hài lòng */
+input[type="radio"] + label {
+  font-size: 14px;
+  color: #555;
+  margin-right: 20px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Đoạn văn bản "Quay về trang chủ" */
+.go-home {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.go-home a {
+  color: #f1a20a;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.go-home a:hover {
+  color: #e98c02;
+}
+
+/* Nút đồng ý */
+button.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button.btn:hover {
+  background-color: #444;
+}
+
+/* Định dạng icon */
+ion-icon {
+  color: #888;
+  font-size: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+
+  .go-home a {
+    font-size: 14px;
+  }
+}
+.go-home {
+  position: fixed; /* Giữ vị trí cố định khi cuộn trang */
+  bottom: 20px; /* Cách dưới của màn hình 20px */
+  right: 20px; /* Cách phải của màn hình 20px */
+  background-color: #f0f0f0; /* Màu nền nhẹ cho dễ nhìn */
+  padding: 10px 20px; /* Khoảng cách trong */
+  border-radius: 5px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.go-home a {
+  text-decoration: none; /* Không có gạch chân */
+  color: #333; /* Màu chữ */
+  font-weight: bold; /* Chữ đậm */
+}
+
+.go-home a:hover {
+  color: #007bff; /* Màu chữ khi di chuột */
+}
+
+.container {
+  margin: 20px;
+}
+
+.content {
+  display: none; /* Ẩn nội dung khi mới tải trang */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}

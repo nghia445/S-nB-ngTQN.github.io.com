@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-toggle">
+        <button class="active" data-target="login-form">Đăng nhập</button>
+        <button data-target="register-form">Đăng ký</button>
+      </div>
+
+      <div class="auth-form-container">
+        <form id="login-form" class="auth-form active">
+          <h2>Đăng nhập</h2>
+          <div class="input-group">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="login-email" required />
+          </div>
+          <div class="input-group">
+            <label for="login-password">Mật khẩu:</label>
+            <input
+              type="password"
+              id="login-password"
+              name="login-password"
+              required
+            />
+          </div>
+          <button type="submit" class="submit-btn">Đăng nhập</button>
+          <div class="alternative-auth">
+            <span>Hoặc đăng nhập bằng</span>
+            <div class="social-icons">
+              <a href="https://vi-vn.facebook.com/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://accounts.google.com/v3/signin/identifier?elo=1&ifkv=ASKV5MhtcIA8u13Qa941KRduOiRHXkqg6XSElLc-CVWamGVEIpp1xBmccnOZO1UpfZpYsHcU6L-5Xg&ddm=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&continue=https%3A%2F%2Faccounts.google.com%2FManageAccount%3Fnc%3D1"
+                ><i class="fab fa-google"></i
+              ></a>
+            </div>
+          </div>
+        </form>
+
+        <form id="register-form" class="auth-form">
+          <h2>Đăng ký</h2>
+          <div class="input-group">
+            <label for="register-name">Họ và tên:</label>
+            <input
+              type="text"
+              id="register-name"
+              name="register-name"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="register-email">Email:</label>
+            <input
+              type="email"
+              id="register-email"
+              name="register-email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="register-password">Mật khẩu:</label>
+            <input
+              type="password"
+              id="register-password"
+              name="register-password"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="confirm-password">Xác nhận mật khẩu:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+          <button type="submit" class="submit-btn">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+    <div class="go-home">
+      <a href="index.html">Quay về trang chủ</a>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .auth-container {
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 400px;
+        margin: 50px auto;
+      }
+
+      .auth-toggle {
+        display: flex;
+        background-color: #ddd;
+      }
+
+      .auth-toggle button {
+        flex: 1;
+        padding: 15px 20px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .auth-toggle button.active {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .auth-toggle button:hover {
+        background-color: #ccc;
+      }
+
+      .auth-form-container {
+        padding: 30px;
+      }
+
+      .auth-form {
+        display: none; /* Ẩn form mặc định */
+      }
+
+      .auth-form.active {
+        display: block; /* Hiển thị form đang được chọn */
+      }
+
+      .auth-form h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+        font-weight: bold;
+      }
+
+      .input-group input[type="email"],
+      .input-group input[type="password"],
+      .input-group input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .submit-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .alternative-auth {
+        margin-top: 25px;
+        text-align: center;
+        color: #777;
+      }
+
+      .social-icons {
+        margin-top: 10px;
+      }
+
+      .social-icons a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #eee;
+        color: #333;
+        margin: 0 5px;
+        font-size: 18px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        background-color: #ddd;
+        color: #007bff;
+      }
+      .go-home {
+        position: fixed; /* Giữ vị trí cố định khi cuộn trang */
+        bottom: 20px; /* Cách dưới của màn hình 20px */
+        right: 20px; /* Cách phải của màn hình 20px */
+        background-color: #f0f0f0; /* Màu nền nhẹ cho dễ nhìn */
+        padding: 10px 20px; /* Khoảng cách trong */
+        border-radius: 5px; /* Bo góc */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+      }
+
+      .go-home a {
+        text-decoration: none; /* Không có gạch chân */
+        color: #333; /* Màu chữ */
+        font-weight: bold; /* Chữ đậm */
+      }
+
+      .go-home a:hover {
+        color: #007bff; /* Màu chữ khi di chuột */
+      }
+    </style>
+
+    <script>
+      const toggleButtons = document.querySelectorAll(".auth-toggle button");
+      const loginForm = document.getElementById("login-form");
+      const registerForm = document.getElementById("register-form");
+
+      toggleButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          toggleButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          const targetFormId = button.getAttribute("data-target");
+          loginForm.classList.remove("active");
+          registerForm.classList.remove("active");
+          document.getElementById(targetFormId).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

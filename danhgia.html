@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="Danhgia.css" />
+  </head>
+  <body>
+    <form action="#" method="get">
+      <p>
+        Họ và Tên: <input type="text" name="username" required />
+        <span>
+          <ion-icon name="person-circle-outline"></ion-icon>
+        </span>
+      </p>
+      <p>
+        Email: <input type="email" name="Emailuser" />
+        <span>
+          <ion-icon name="mail-outline"></ion-icon>
+        </span>
+      </p>
+      <p>
+        Số điện thoại: <input type="number" name="sdt" max="9" min="0" />
+        <span>
+          <ion-icon name="call-outline"></ion-icon>
+        </span>
+      </p>
+
+      <p>
+        Đánh giá chất lượng sân:
+        <textarea name="question" cols="25" rows="8">Nội dung: </textarea>
+      </p>
+
+      <p>
+        Khảo sát mức độ hài lòng về dịch vụ:
+        <input
+          type="radio"
+          id="khaosat1"
+          name="gender"
+          value="khaosat"
+          required
+        />
+        <label for="khaosat1">Tốt</label>
+        <input
+          type="radio"
+          id="khaosat2"
+          name="gender"
+          value="khaosat"
+          required
+        />
+        <label for="khaosat2">Tạm</label>
+        <input
+          type="radio"
+          id="khaosat3"
+          name="gender"
+          value="khaosat"
+          required
+        />
+        <label for="khaosat3">Kém</label>
+      </p>
+
+      <div class="remember-forgot">
+        <label
+          ><input type="checkbox" /> Chấp nhận đúng với các thông tin
+        </label>
+      </div>
+
+      <!-- Nút đồng ý được di chuyển xuống cuối form -->
+      <button type="submit" class="btn">ĐỒNG Ý</button>
+    </form>
+
+    <div class="go-home">
+      <a href="index.html">Quay về trang chủ</a>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
